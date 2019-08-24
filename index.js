@@ -51,7 +51,7 @@ function removeFromCart(item) {
   if (occ === cart.length) {
      lit3 = "That item is not in your cart.";
      return lit3}
-  else { cart = cart.slice(0, occ), cart.slice(occ+1);
+  else { cart = [...cart.slice(0,occ), ...cart.slice(occ+1)];
     return cart}
 }
 
